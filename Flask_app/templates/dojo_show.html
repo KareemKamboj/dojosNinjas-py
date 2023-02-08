@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Show</title>
+</head>
+<body>
+    <h1>{{one_dojo.name}} Ninjas</h1> 
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+    {% for ninja in one_dojo.ninjas%}
+    <tr>
+        <th>{{ninja.first_name}}</th>
+        <th>{{ninja.last_name}}</th>
+        <th>{{ninja.age}}</th>
+    </tr>
+    {% endfor %}
+    <a href="/">Home</a>
+</body>
+</html>
